@@ -1,7 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Toolbar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@android:drawable/ic_media_previous"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Subject Detail"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Summary Button -->
+        <Button
+            android:id="@+id/btnMakeSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Make Summary" />
+
+        <!-- Resource Links -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resources"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvArticle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Articles"
+            android:textSize="16sp"
+            android:drawablePadding="8dp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Videos"
+            android:textSize="16sp"
+            android:drawablePadding="8dp"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvBooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Books"
+            android:textSize="16sp"
+            android:drawablePadding="8dp"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- External Links -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="External Links"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/ivYoutube"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:contentDescription="YouTube"
+                android:layout_marginEnd="24dp" />
+
+            <ImageView
+                android:id="@+id/ivGoogle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:contentDescription="Google" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
